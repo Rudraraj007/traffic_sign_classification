@@ -1,0 +1,14 @@
+env:
+  - name: PORT
+    value: 8080
+services:
+  - name: web
+    buildCommand: pip install -r requirements.txt && python voice.py
+    env:
+      - name: PORT
+        value: 8080
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1
+    healthCheckPath: /
+    healthCheckIntervalSeconds: 5
+    healthCheckTimeoutSeconds: 10
+    httpPort: 8080
