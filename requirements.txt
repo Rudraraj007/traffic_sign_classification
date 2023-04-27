@@ -1,5 +1,6 @@
 numpy==1.19.5
+Pillow==8.4.0
+tensorflow==2.4.0
 keras==2.4.3
-pillow==8.2.0
 gtts==2.2.3
 playsound==1.2.2
