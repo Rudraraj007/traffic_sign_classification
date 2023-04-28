@@ -9,6 +9,7 @@ from gtts import gTTS
 from playsound import playsound
 import tempfile
 
+os.environ['CUDA_VISIBLE_DEVICES'] = 'PCI\VEN_10DE&DEV_1F99&SUBSYS_14471025&REV_A1\4&C337064&0&0009'
 model = load_model('traffic_classifier.h5')
 
 classes = { 1:'Speed limit (20km/h)',
